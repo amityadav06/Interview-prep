@@ -1,0 +1,66 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*====================================
+MIX BLEND MODE
+===================================*/
+
+.img-container {
+  background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTbuyCvsc1a5bddwodJGlgZqBc2eVptWAiTBg&usqp=CAU");
+  height: 100vh;
+  width: 100vw;
+}
+.inner {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: black;
+  color: white;
+  height: 100%;
+  width: 100%;
+  font-size: 120px;
+  mix-blend-mode: multiply;
+  font-weight: 700;
+}
+
+/*======================================================
+Positioning
+========================================================*/
+.parent {
+  position: relative;
+  height: 500px;
+  width: 500px;
+  background-color: black;
+  margin-left: 10%;
+  margin-top: 2%;
+}
+.sofa {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  height: 90%;
+  width: 50px;
+  background-color: blueviolet;
+}
+.chair {
+  position: absolute;
+  height: 50px;
+  width: 100%;
+  background-color: red;
+}
+.bed {
+  position: absolute;
+  bottom: 0;
+  height: 90%;
+  width: 150px;
+  background-color: yellow;
+}
+.b1 {
+  position: absolute;
+  background-color: violet;
+  height: 30px;
+  width: 150px;
+  top: 30px;
+}

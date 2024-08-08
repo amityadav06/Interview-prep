@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.parent {
+    /* display: flex; */
+    height: 500px;
+    width: 500px;
+    border: 2px solid black;
+    background: burlywood;
+}
+
+.sofa {
+    height: 150px;
+    width: 150px;
+    background: blue;
+}
+
+.chair {
+    height: 150px;
+    width: 150px;
+    background: red;
+    position: relative;
+
+}
+
+.bed {
+    height: 150px;
+    width: 150px;
+    background: chartreuse;
+    position: relative;
+}
+
+.b1 {
+    height: 50px;
+    width: 50px;
+    background: yellow;
+    position: fixed;
+    right: 0;
+}
