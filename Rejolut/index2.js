@@ -25,11 +25,20 @@
 
 // Longest String in an array==============================================
 // function longest_string(arr) {
-//   let max = arr[0].le=ngth;
+//   let max = arr[0].length;
 //   arr.map((v) => (max = Math.max(max, v.length)));
 //   result = arr.filter((v) => v.length == max);
 //   return result;
 // }
+
+// approach two using forEach
+// let maxLengthString = ''
+// arr.forEach((ele) => {
+//   if(ele.length > maxLengthString.length){
+//     maxLengthString = ele
+//   }
+// })
+// console.log(maxLengthString);
 
 // console.log(longest_string(["aaaaaaaa", "aa", "aaa", "aaaaa", "aa"]));
 

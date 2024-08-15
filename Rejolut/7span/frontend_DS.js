@@ -208,21 +208,33 @@
 //==============================================================================
 // Second largest
 //==============================================================================
+// method 1
 // function secondLargest(arr) {
-//   let i;
-//   let res = -1;
-//   let largest = -1;
-//   for (i = 0; i < arr.length; i++) {
-//     if (arr[i] > largest) {
-//       res = largest;
-//       largest = arr[i];
-//     } else if (arr[i] != largest && res > arr[i]) {
-//       res = arr[i];
+//     if (arr.length < 2) return null; // Handle arrays with less than 2 elements
+  
+//     let largest = -1;
+//     let secondLargest = -1;
+  
+//     for (let i = 0; i < arr.length; i++) {
+//       if (arr[i] > largest) {
+//         secondLargest = largest;
+//         largest = arr[i];
+//       } else if (arr[i] > secondLargest && arr[i] < largest) {
+//         secondLargest = arr[i];
+//       }
 //     }
+  
+//     return secondLargest;
 //   }
-//   return res;
-// }
-// console.log(secondLargest([2, 3, 7, 1, 28, 29, 23]));
+  
+//   console.log(secondLargest([2, 3, 7, 1, 28, 29, 23])); // Output: 28
+  
+// method 2
+// function secondLargest(arr) {
+//     arr.sort((a, b) => b - a);
+//     return arr[1];
+//   }
+//   console.log(secondLargest([2, 3, 7, 1, 28, 29, 23])); 
 
 // ================================================================================================
 // Flaten an array | Flipkart fontend interview question
@@ -240,6 +252,13 @@
 //     },[])
 // }
 // console.log(flatArray([[[1,[1,1]],2,3],[4,5]]));
+
+// Example Walkthrough:
+// For the input [[[1,[1,1]],2,3],[4,5]]:
+// The function starts by processing the outermost array.
+// It encounters the first element [[1,[1,1]],2,3], which is an array, so it recursively calls flatArray on this element.
+// The process continues, breaking down the nested arrays until all elements are flattened.
+// The final result is [1, 1, 1, 2, 3, 4, 5].
 
 // ================================================================================================
 // Flaten Deeply nested object | Adobe Frontend Interview question
@@ -285,3 +304,7 @@
 //     return finalObj;
 // }
 // console.log(flatObject(obj, ""));
+
+
+// different types of for loops and their differences
+// type coercion from freecodecamp == vs ===

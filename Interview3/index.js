@@ -42,22 +42,47 @@ console.log(name); */
     { return 'hey arnold' }
 }
 console.log(greet({ name: 'amy' })) */
+// When we compare two objects (including array and function), it compare the memory reference not the actual
+// values, even person and { name: 'anu } has same values but they both are different inctances with different
+// memory reference so its false
 
 // hey amy--------------------------------------------------------
-/* let dog = 
-    { 
-        name: 'doggo',
-        sayName (){ 
-            console.log(this.name) 
-        } 
-    }
+/* let dog = { 
+    namee: 'doggo',
+    sayName (){ 
+        console.log(this.namee) 
+        return this.namee
+    } 
+}
         
-let sayName = dog.sayName 
-sayName() */
+let a = dog.sayName */
+// a()   // undefined
+// When you assign a method from an object to a variable and then call it, 
+// the this context is lost. As a result, the method no longer has access 
+// to the original object's properties, leading to undefined being logged 
+// and returned. To preserve the this context, you can use bind, call, or 
+// apply methods to explicitly set the context when invoking the function.
+// a.call(dog)
+// a.apply(dog)
+// let newA = a.bind(dog)
+// newA()
 
 //---------------------------------------------------------------
-/* var name = {firstName: 'sarwan',lastName :'kumar'};
+/* var obj = {firstName: 'sarwan',lastName :'kumar'};
 function say(){ 
     console.log('' + this.firstName + ' ' + this.lastName); 
 }
-say.call(name); */
+say.call(obj); */
+
+// ------------------------------------------------------------- Advance interview
+// var length = 4; 
+// function callback() {
+//     console.log(this.length); 
+// } 
+// const object = { 
+//     length: 5, 
+//     method() { 
+//         arguments[0](); 
+//     }
+// }; 
+// object.method(callback, 1, 2);
