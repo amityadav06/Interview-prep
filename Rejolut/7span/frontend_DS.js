@@ -13,9 +13,9 @@
 
 // function checkIfNested(data) {
 //   var isoBj = true;
-//   for (var elem in data) {
-//     var val = data[elem];
-//     var result = isObject(val);
+//   for (var key in data) {
+//     var value = data[key];
+//     var result = isObject(value);
 //     if (!result) {
 //       isoBj = false;
 //     }
@@ -308,3 +308,5 @@
 
 // different types of for loops and their differences
 // type coercion from freecodecamp == vs ===
+// pair sum
+// longest subarray with target sum
