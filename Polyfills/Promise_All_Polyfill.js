@@ -11,8 +11,8 @@ const taskArray = [dummyAPI(1000), dummyAPI(3000), dummyAPI(5000)];
 const promisePolyfill = (taskArray) =>{
     return new Promise((resolve, reject)=>{
         const output = [];
-        taskArray.forEach((promise, index)=>{
-            promise.then((data)=>{
+        taskArray.forEach((currentPromise, index)=>{
+            currentPromise.then((data)=>{
                 output[index] = data;
                 if(index === taskArray.length - 1) resolve(output)
             }).catch((err)=>{

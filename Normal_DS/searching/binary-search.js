@@ -6,16 +6,16 @@
 // Input: nums = [-1,0,3,5,9,12], target = 9  ----->>>>>  Output:  4
 // Input: nums = [-1,0,3,5,9,12], target = 2  ----->>>>>  Output: -1
 
-function search(nums, target) {
+function search(arr, target) {
     let start = 0;
-    let end = nums.length - 1;
+    let end = arr.length - 1;
   
     while (start <= end) {
       let middle = Math.floor((start + end) / 2);
   
-      if (nums[middle] === target) {
+      if (arr[middle] === target) {
         return middle;
-      } else if (nums[middle] < target) {
+      } else if (arr[middle] < target) {
         start = middle + 1;
       } else {
         end = middle - 1;
