@@ -25,9 +25,6 @@ const circumference = (radius) => {
   return 2 * Math.PI * radius;
 };
 
-const diameter = (radius) => {
-  return 2 * radius;
-};
 
 Array.prototype.calculate = function (cb) {
   const output = [];
