@@ -305,6 +305,32 @@
 // }
 // console.log(flatObject(obj, ""));
 
+// ================================================================================================
+// [1,2,3,4,5,6]  [1,2,[3,4,[5,6]]]  check both arrays are equal or not
+// ================================================================================================
+
+// function checkEqual(arr1, arr2) {
+//     if (arr1 === arr2) return true; // Check if they are the same reference
+//     if (arr1 == null || arr2 == null) return false; // Check if either is null
+//     if (arr1.length !== arr2.length) return false; // Check if they have the same length
+  
+//     for (let i = 0; i < arr1.length; i++) {
+//       if (Array.isArray(arr1[i]) && Array.isArray(arr2[i])) {
+//         if (!checkEqual(arr1[i], arr2[i])) return false; // Recursive call for nested arrays
+//       } else if (arr1[i] !== arr2[i]) {
+//         return false; // Check for equality of non-array elements
+//       }
+//     }
+  
+//     return true; // Arrays are equal
+//   }
+  
+//   // Example usage:
+//   const array1 = [1, 2, 3, 4, 5, 6];
+//   const array2 = [1, 2, [3, 4, [5, 6]]];
+  
+//   console.log(checkEqual(array1, array2)); // Output: false
+  
 
 // different types of for loops and their differences
 // type coercion from freecodecamp == vs ===
