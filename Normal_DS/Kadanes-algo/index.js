@@ -8,7 +8,7 @@ function maxSubArray(arr) {
     let end = 0;   // End index of the current subarray
     let s = 0;     // Start index of the maximum subarray found so far
   
-    // Iterate through the array
+    // Iterate through the array   [34, -50, 42, 14, -5, 86];
     for (let i = 1; i < arr.length; i++) {
       if (arr[i] > maxEndingHere + arr[i]) {
         maxEndingHere = arr[i];
@@ -54,3 +54,22 @@ For each element, update maxEndingHere to be the maximum of the current element 
 Update maxSoFar to be the maximum of maxSoFar and maxEndingHere.
 Return maxSoFar as it contains the result.
 */
+
+
+function KadaneAlogMaxSum(arr){
+  let sum = 0;
+  let max = arr[0];
+
+  for(let i = 0; i<arr.length; i++){
+    sum = sum + arr[i];
+    max = Math.max(max, sum);
+    if(sum < 0){
+      sum = 0
+    }
+  }
+
+  return max;
+}
+
+const arr = [34, -50, 42, 14, -5, 86];
+console.log(KadaneAlogMaxSum(arr));
