@@ -20,3 +20,14 @@ Function.prototype.myBind = function(...args){
 const res = printName.myBind(user, 'delhi', 'mumbai');
 res('agra')
 
+// Polyfills
+/*   
+Map, filter, reduce, foreach, find
+Call, bind, apply
+once, memoize
+promise, promise.all
+debounce, throttle
+flatArray, flatObject
+string split
+setTimeout, setInterval
+*/

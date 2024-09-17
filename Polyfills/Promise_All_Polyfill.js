@@ -8,7 +8,7 @@ const dummyAPI = (time)=>{
 
 const taskArray = [dummyAPI(1000), dummyAPI(3000), dummyAPI(5000)];
 
-const promisePolyfill = (taskArray) =>{
+const allPromisePolyfill = (taskArray) =>{
     return new Promise((resolve, reject)=>{
         const output = [];
         taskArray.forEach((currentPromise, index)=>{
@@ -22,7 +22,7 @@ const promisePolyfill = (taskArray) =>{
     })
 }
 
-promisePolyfill(taskArray).then((data)=>{
+allPromisePolyfill(taskArray).then((data)=>{
     console.log(`the output is ${data}`);
 }).catch((err)=>{
     console.log(`the error is ${err}`);

@@ -1,4 +1,4 @@
-// Find maximum sum sub array with window size k
+// Find maximum sum of sub array with window size k
 
 function maxSumSubarray(arr, k){
     let i = 0;

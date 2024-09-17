@@ -1,73 +1,65 @@
-// Polyfill of Promise
+function PromisePolyfill(executor){
+    let onResolve;
+    let onReject;
+    let isFullfilled = false;
+    let isRejected = false;
+    let isCalled = false;
+    let value;
 
-const cart = ['shoes', 'fruits', 'chocolates'];
+    function resolve(val){
+        isFullfilled = true;
+        value = val;
 
-// Promise consumer
-// createOder, proceedToPayment, ShowOrderSummary, UpdateTheWalled
-
-const promise = createOrder(cart);
-
-console.log(promise);
-promise
-.then(function(orderId){
-    console.log(orderId);
-    return orderId
-})
-.then(function(orderId){
-    return proceedToPayment(orderId)
-})
-.then(function(paymentInfo){    
-    console.log(paymentInfo);
-    return showOrderSummary(paymentInfo)
-})
-.then(function(paymentInfo){
-    console.log(paymentInfo);
-    return updateTheWallet(paymentInfo)
-})
-.then(function(walletInfo){
-    console.log(walletInfo);
-})
-.catch(function(err){
-    console.log(err.message);
-})
-
-function createOrder(card){
-    const pr = new Promise(function(resolve, reject){
-        if(!validateCart(cart)){
-            const err = new Error('Cart is not valid');
-            reject(err);
+        if(typeof onResolve === 'function'){
+            onResolve(val)
+            isCalled = true;
         }
-        const orderId = '12344';
-        setTimeout(() => {
-            if(orderId){
-                resolve(orderId)
-            }
-        }, 5000);
-    })
-    return pr;
+    }
+
+    function reject(val){
+        isRejected = true;
+        value = val;
+        if(typeof onReject === 'function'){
+            onReject(val)
+            isCalled = true;
+        }      
+    }
+18001234001 
+    this.then = function(callback){
+        onResolve = callback;
+        if(isFullfilled && !isCalled){
+            isCalled = true;
+            onResolve(value)
+        }
+        return this;
+    }
+
+    this.catch = function(callback){
+        onReject = callback
+        if(isRejected && !isCalled){
+            isCalled = true;
+            onReject(value)
+        }
+        return this;
+    }
+
+    try {
+        executor(resolve, reject)
+    } catch (error) {
+        reject(error)
+    }
+
 }
 
-function proceedToPayment(orderId){
-    return new Promise(function(resolve, reject){
-        resolve("Payment is successful")
-    })
-}
+const examplePolyfill = new PromisePolyfill((resolve, reject) => {
+    setTimeout(() => {
+        resolve(2)
+    }, 2000);
+})
 
-function showOrderSummary(paymentInfo){
-    return new Promise(function(resolve, reject){
-        setTimeout(() => {
-            resolve('Order Summmary')
-        }, 2000);
-    })
-}
-function updateTheWallet(){
-    return new Promise(function(resolve, reject){
-        setTimeout(() => {
-            resolve("Walledt balance: 00")
-        }, 2000);
-    })
-}
-
-function validateCart(cart){
-    return cart.length > 0 ? true : false
-}
+examplePolyfill.then((data) => {
+    console.log(data);
+    return data
+}).catch((err) => {
+    console.log(err);
+})
