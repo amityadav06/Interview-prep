@@ -6,7 +6,11 @@ const dummyAPI = (time)=>{
     })
 }
 
-const taskArray = [dummyAPI(1000), dummyAPI(3000), dummyAPI(5000)];
+const taskArray = [
+    dummyAPI(1000),    // api 1
+    dummyAPI(3000),    // api 2
+    dummyAPI(5000)     // api 3
+];
 
 const allPromisePolyfill = (taskArray) =>{
     return new Promise((resolve, reject)=>{

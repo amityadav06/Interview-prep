@@ -24,7 +24,7 @@ function PromisePolyfill(executor){
             isCalled = true;
         }      
     }
-18001234001 
+
     this.then = function(callback){
         onResolve = callback;
         if(isFullfilled && !isCalled){
