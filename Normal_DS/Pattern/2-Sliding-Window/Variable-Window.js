@@ -77,6 +77,6 @@ function longestSubstringWithNoRepeatingChar(str){
 }
 
 // Example usage:
-console.log(longestSubstringWithNoRepeatingChar("araacighi")); // Output: 4 ("araa")
-console.log(longestSubstringWithNoRepeatingChar("araaci")); // Output: 2 ("aa")
-console.log(longestSubstringWithNoRepeatingChar("cbbebi")); // Output: 5 ("bbebi")
+console.log(longestSubstringWithNoRepeatingChar("araacighi")); // Output: 5 ("acigh")
+console.log(longestSubstringWithNoRepeatingChar("araaci")); // Output: 3 ("aci")
+console.log(longestSubstringWithNoRepeatingChar("cbbebi")); // Output: 3 ("ebi")

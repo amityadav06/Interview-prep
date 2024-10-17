@@ -22,7 +22,7 @@ hello();
 // Memozie function in javascript
 // ==============================================================================================
 
-function myMemoize(fu, context){
+function myMemoize(fn, context){
     const res = {};
     return function(...args){
         var argsCache = JSON.stringify(args);
