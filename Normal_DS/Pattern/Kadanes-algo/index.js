@@ -73,3 +73,38 @@ function KadaneAlogMaxSum(arr){
 
 const arr = [34, -50, 42, 14, -5, 86];
 console.log(KadaneAlogMaxSum(arr));
+
+// ============================================================================
+// If you want max values subarray then this is the solution
+// ============================================================================
+
+function KadaneAlogMaxSum(arr) {
+  let sum = 0;
+  let max = arr[0];
+  let start = 0;
+  let end = 0;
+  let tempStart = 0;
+
+  for (let i = 0; i < arr.length; i++) {
+    sum += arr[i];
+
+    if (sum > max) {
+      max = sum;
+      start = tempStart;
+      end = i;
+    }
+
+    if (sum < 0) {
+      sum = 0;
+      tempStart = i + 1; // Reset the temporary start index
+    }
+  }
+
+  // Extracting the subarray
+  const subarray = arr.slice(start, end + 1);
+  return { max, subarray };
+}
+
+const arr1 = [34, -50, 42, 14, -5, 86];
+const result1 = KadaneAlogMaxSum(arr1);
+console.log(result1);

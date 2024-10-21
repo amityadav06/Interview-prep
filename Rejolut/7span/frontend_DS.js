@@ -2,31 +2,36 @@
 //                         CHECK NESTED OBJECT
 //======================================================================
 
-//var person = {
-//   name: "hello",
-//   age: 29,
-// };
-
-// function isObject(data1) {
-//   return data1 !== null && !(data1 instanceof Array) && data1 instanceof Object;
-// }
-
-// function checkIfNested(data) {
-//   var isoBj = true;
-//   for (var key in data) {
-//     var value = data[key];
-//     var result = isObject(value);
-//     if (!result) {
-//       isoBj = false;
+// var person = {
+//     name: "hello",
+//     age: 29,
+//     address: {
+//       city: 'delhi',
+//       area: {
+//           common: 'yes'
+//       }
 //     }
+//   };
+  
+//   function isObject(data1) {
+//     return data1 !== null && !(data1 instanceof Array) && data1 instanceof Object;
 //   }
-//   return isoBj;
-// }
-
-// var result = checkIfNested(person);
-
-// console.log(result);
-
+  
+//   function checkIfNested(data) {
+//     var isoBj = false;
+//     for (var key in data) {
+//       var value = data[key];
+//       var result = isObject(value);
+//       if (result) {
+//         isoBj = true;
+//       }
+//     }
+//     return isoBj;
+//   }
+  
+//   var result = checkIfNested(person);
+  
+//   console.log(result);
 //========================================================================
 //                      PRIME CHECK
 //========================================================================
