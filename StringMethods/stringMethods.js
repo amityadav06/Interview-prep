@@ -39,6 +39,31 @@ const modifiedString = modifyString(inputString);
 console.log(modifiedString); // Output: "IFMMP, XPSME! AZY"
 
 // -------------------------------------------------------------------------------------
+//                          Reverse word from string
+// -------------------------------------------------------------------------------------
+
+
+var reverseWords = function(s) {
+    let splits = s.split(' ');
+    let stack = [];
+    let finalStr = ''
+
+    for(let i of splits){
+        stack.push(i)
+    }
+
+    while(stack.length){
+        let current = stack.pop();
+        if(current){
+            finalStr = finalStr + " " + current;
+        }
+    }
+
+    return finalStr.trim();
+};
+
+
+// -------------------------------------------------------------------------------------
 //                          Count Vowels and Consonants
 // -------------------------------------------------------------------------------------
 
