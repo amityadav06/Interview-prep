@@ -38,8 +38,10 @@ const inputString = "Hello, World! zYx";
 const modifiedString = modifyString(inputString);
 console.log(modifiedString); // Output: "IFMMP, XPSME! AZY"
 
-// ----------------- String Interview question ----------------------------------------
-//  Count Vowels and Consonants
+// -------------------------------------------------------------------------------------
+//                          Count Vowels and Consonants
+// -------------------------------------------------------------------------------------
+
 
 function countVowelsAndConsonants(str) {
     const vowels = 'aeiouAEIOU';
@@ -64,8 +66,30 @@ const result = countVowelsAndConsonants("hello");
 console.log(`Vowels: ${result.vowels}, Consonants: ${result.consonants}`); 
 // Output: Vowels: 2, Consonants: 3
 
-// ----------------- String Interview question ----------------------------------------
-// Permutations of a String
+// ------------------------------------------------------------------------------------
+//                       Generate alphanumeric string with given length
+//-------------------------------------------------------------------------------------
+
+function generateAlphanumericString(length) {
+    const characters = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
+    let result = '';
+    
+    for (let i = 0; i < length; i++) {
+        const randomIndex = Math.floor(Math.random() * characters.length);
+        result += characters[randomIndex];
+    }
+    
+    return result;
+}
+
+// Example usage:
+const randomString = generateAlphanumericString(10);
+console.log(randomString);
+
+
+// -------------------------------------------------------------------------------------
+//                              Permutations of a String
+// -------------------------------------------------------------------------------------
 
 function permuteString(str) {
     const results = [];

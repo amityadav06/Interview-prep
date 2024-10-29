@@ -336,8 +336,59 @@
   
 //   console.log(checkEqual(array1, array2)); // Output: false
   
+//------------------------------------------------------------------------------------------------------------
+//                      Delete falsy values from this nested object (Cashify)
+//------------------------------------------------------------------------------------------------------------
 
-// different types of for loops and their differences
-// type coercion from freecodecamp == vs ===
-// pair sum
-// longest subarray with target sum
+
+// function deleteFalseValues(obj, seen = new WeakSet()) {
+//     // Handle circular references
+//     if (seen.has(obj)) return {};
+//     seen.add(obj);
+
+//     // Initialize the output object
+//     let output = {};
+
+//     for (let key in obj) {
+//         let value = obj[key];
+
+//         // Check if value is an object and not null
+//         if (value && typeof value === 'object') {
+//             // If it's an array, filter it
+//             if (Array.isArray(value)) {
+//                 const filteredArray = value.filter(item => item !== '' && item !== false && item !== null && item !== 0);
+//                 if (filteredArray.length > 0) {
+//                     output[key] = filteredArray;
+//                 }
+//             } else {
+//                 // It's a regular object, so we call deleteFalseValues recursively
+//                 const nestedOutput = deleteFalseValues(value, seen);
+//                 if (Object.keys(nestedOutput).length > 0) {
+//                     output[key] = nestedOutput;
+//                 }
+//             }
+//         } else {
+//             // Check for falsy values
+//             if (value !== '' && value !== false && value !== null && value !== 0) {
+//                 output[key] = value;
+//             }
+//         }
+//     }
+
+//     return output;
+// }
+
+// // Test the function
+// const obj = {
+//     a: null,
+//     b: false,
+//     c: true,
+//     d: 0,
+//     e: 1,
+//     f: '',
+//     g: 'a',
+//     h: [null, false, '', true, 1, 'a'],
+//     i: { j: 0, k: false, l: 'a' }
+// };
+
+// console.log(deleteFalseValues(obj));
