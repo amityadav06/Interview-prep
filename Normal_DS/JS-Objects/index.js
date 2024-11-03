@@ -127,6 +127,29 @@
 // 7 - Find the Maximum Depth of an Object: Write a function that returns the maximum depth of a nested object.
 //--------------------------------------------------------------------------------------------------------------------------------
 
+function maxDepth(obj) {
+    let max = 0;
+    for (let key in obj) {
+        let value = obj[key];
+        if (typeof value === 'object' && value !== null) {
+            max = Math.max(max, maxDepth(value));
+        }
+    }
+    return max + 1; // Add 1 for the current level
+}
+
+const nestedObj = {
+    level1: {
+        level2: {
+            level3: {}
+        },
+        level2_2: {}
+    },
+    level1_2: {}
+};
+
+const depth = maxDepth(nestedObj);
+console.log(depth); // Output: 4
 
 //--------------------------------------------------------------------------------------------------------------------------------
 
@@ -181,20 +204,20 @@
 //--------------------------------------------------------------------------------------------------------------------------------
 
 
-// function findMissingKeys(obj, arr){
-//     const res = arr.filter((item) => {
-//         return !(item in obj)
-//     })
-//     return res;
-// }
+function findMissingKeys(obj, arr){
+    const res = arr.filter((item) => {
+        return !(item in obj)
+    })
+    return res;
+}
 
-// const myObject = {
-//     name: 'Alice',
-//     age: 25,
-//     city: 'Wonderland'
-//   };
+const myObject = {
+    name: 'Alice',
+    age: 25,
+    city: 'Wonderland'
+  };
   
-//   const requiredKeys = ['name', 'age', 'country', 'city', 'app'];
+  const requiredKeys = ['name', 'age', 'country', 'city', 'app'];
   
-//   const missing = findMissingKeys(myObject, requiredKeys);
-//   console.log(missing);
+  const missing = findMissingKeys(myObject, requiredKeys);
+  console.log(missing);
