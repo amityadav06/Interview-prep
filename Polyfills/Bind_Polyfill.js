@@ -1,4 +1,8 @@
 //==================================================================
+// By Roadside Coder
+//==================================================================
+
+//==================================================================
 // Call
 //==================================================================
 
@@ -25,7 +29,7 @@ printName.myCall(user, 'Delhi', 'Mumbai', 'Agra')
 // Apply
 //==================================================================
 
-Function.prototype.myCall = function(context, args){
+Function.prototype.myApply = function(context, args){
     if(typeof this !== 'function'){
         throw new Error('Its not callable')
     }
@@ -36,7 +40,7 @@ Function.prototype.myCall = function(context, args){
     context.fn(...args)
 }
 
-printName.myCall(user, ['Delhi', 'Mumbai', 'Agra'])
+printName.myApply(user, ['Delhi', 'Mumbai', 'Agra'])
 
 //==================================================================
 // Bind

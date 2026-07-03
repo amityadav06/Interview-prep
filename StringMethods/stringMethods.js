@@ -1,7 +1,25 @@
+// -------------------------------------------------------------------------------------
+//                         1- String Palindrome
+// -------------------------------------------------------------------------------------
+
+
+// -------------------------------------------------------------------------------------
+//                         2- String Anagrams
+// -------------------------------------------------------------------------------------
+
+
+// -------------------------------------------------------------------------------------
+//                         3- String balance paranthesis (stack)
+// -------------------------------------------------------------------------------------
+
+
 // u have givern a string. replace every letter in string with the following in the 
 // alphabet (ie. c becomes d, z becomes a) Then capitalise every letter in the new string
 // and finally returned the modified string
-// ----------------- GYANN AI Interview question ----------------------------------------
+//---------------------------------------------------------------------------------------
+// ---------------------- 4 - GYANN AI Interview question -------------------------------
+//---------------------------------------------------------------------------------------
+
 
 function modifyString(str) {
     let result = '';
@@ -39,7 +57,7 @@ const modifiedString = modifyString(inputString);
 console.log(modifiedString); // Output: "IFMMP, XPSME! AZY"
 
 // -------------------------------------------------------------------------------------
-//                          Reverse word from string
+//                         5 - Reverse word from string
 // -------------------------------------------------------------------------------------
 
 
@@ -64,7 +82,7 @@ var reverseWords = function(s) {
 
 
 // -------------------------------------------------------------------------------------
-//                          Count Vowels and Consonants
+//                         6 - Count Vowels and Consonants
 // -------------------------------------------------------------------------------------
 
 
@@ -92,7 +110,7 @@ console.log(`Vowels: ${result.vowels}, Consonants: ${result.consonants}`);
 // Output: Vowels: 2, Consonants: 3
 
 // ------------------------------------------------------------------------------------
-//                       Generate alphanumeric string with given length
+//                     7 -  Generate alphanumeric string with given length
 //-------------------------------------------------------------------------------------
 
 function generateAlphanumericString(length) {
@@ -113,7 +131,7 @@ console.log(randomString);
 
 
 // -------------------------------------------------------------------------------------
-//                              Permutations of a String
+//                            8 -  Permutations of a String
 // -------------------------------------------------------------------------------------
 
 function permuteString(str) {

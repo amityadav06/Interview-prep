@@ -55,4 +55,4 @@ for (var i = 0; i < arr.length; i++) {
     console.log("Index: " + i + ", element: " + arr[i]);
   }, 3000);
 }
-// 4 4 4 4
+// 4 4 4 4 

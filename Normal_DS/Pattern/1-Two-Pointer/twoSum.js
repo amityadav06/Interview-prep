@@ -18,6 +18,7 @@ function twoSum (arr, target){
     }
     return [-1, -1]
 }
+// [1, 2, 7, 9, 22, 32, 61]
 console.log(twoSum([22, 32, 1, 61, 7, 9, 2], 9));
 
 
@@ -34,3 +35,18 @@ function twoSum (arr, target){
     return [-1, -1]
 }
 console.log(twoSum([22, 32, 1, 61, 7, 9, 2], 9));
+
+//=======================================================
+// 2 - Shift all zeros to the end of the array
+//=======================================================
+function shiftZeros(arr){
+    let pos = 0;
+    for (let i = 0;i<arr.length;i++){
+        if(arr[i] !== 0){
+            [arr[i], arr[pos]] = [arr[pos], arr[i]]
+            pos++
+        }
+    }
+    return arr
+}
+console.log(shiftZeros([0, 1, 0, 3, 12]));
