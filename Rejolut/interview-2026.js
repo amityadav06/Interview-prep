@@ -336,3 +336,17 @@
 // how to debug mobile performance issue, page load performance issue and how to resolve
 // debounce vs throttle
 // how do you mock api in jest
+
+//=========================================================
+// Coforge Technical Interview Questions - Full stack MERN
+//=========================================================
+
+// intro
+// const str = “javascriptinterview”
+// Find longest substring that is non repeating characters - sliding winndow all unique chars
+// Node js event loop
+// Node js streams
+// Node js clustering
+// React fiber
+// debounce vs throttle
+// usememo vs usecallback
