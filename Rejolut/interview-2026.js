@@ -351,4 +351,49 @@
 // debounce vs throttle
 // usememo vs usecallback
 
-//comment for commit check in heatmap
+//=========================================================
+// Virtusa Technical Interview Questions - React
+//=========================================================
+// const chars = ['R', 'E', 'A', 'C', 'T'];
+// const indices = [3, 2, 5, 1, 4];
+// // Output [A, E, T, R, C]
+
+// function arrayWithIndex(arr1, arr2){
+//     const output = [];
+//     for(let i = 0; i< arr1.length; i++){
+//         let char = arr2[i] - 1
+//         output.push(arr1[char])
+//     }
+//     return output;
+// }
+// console.log(arrayWithIndex(chars, indices))
+
+// how did yoiu mangae real time stocks data 1000+ rending on UI
+// usememo vs usecallback
+// HOC
+// how to prevent prop drilling
+// how to take requirenets how do you deliver things
+// To whom do you reach for clarifications
+// day to day roles and responsiblites
+// dom vs vdom
+// routing in react, how do you used to do in old applications in javascript
+// how do you decide story points
+// how do you do SSR in react
+
+//=========================================================
+// Swiftlyy AI Technical Interview Questions - React
+//=========================================================
+
+// If there are 100 of PR's then how do you review
+// design a system like instagram
+
+// R2
+// What are microforontends
+// how do you optimise web page performance
+// what are code web vitals, how do you do code lazy loading and code splitting
+// how do you do preload, prefetch and the things im components
+
+// R3
+// React coding round - > File Explorer
+
+// R4
